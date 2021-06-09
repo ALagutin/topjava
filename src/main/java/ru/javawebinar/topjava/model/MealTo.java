@@ -1,33 +1,24 @@
 package ru.javawebinar.topjava.model;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 public class MealTo {
-    public static final int CALORIES_PER_DAY = 2000;
-
     private final LocalDateTime dateTime;
-
     private final String description;
-
     private final int calories;
-
     private final boolean excess;
+    private final int id;
 
-    public MealTo(LocalDateTime dateTime, String description, int calories, boolean excess) {
+    public MealTo(int id, LocalDateTime dateTime, String description, int calories, boolean excess) {
+        this.id = id;
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
         this.excess = excess;
     }
 
-    public LocalDate getDate() {
-        return dateTime.toLocalDate();
-    }
-
-    public LocalTime getTime() {
-        return dateTime.toLocalTime();
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
     public String getDescription() {
@@ -38,7 +29,13 @@ public class MealTo {
         return calories;
     }
 
-    public boolean isExcess() {return excess;}
+    public boolean isExcess() {
+        return excess;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     @Override
     public String toString() {

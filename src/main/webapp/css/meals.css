@@ -7,11 +7,6 @@ td, th {
     padding: 3px 20px 3px 7px;
 }
 
-h3 {
-    text-align: center;
-    font-size: 1.75rem;
-}
-
 th {
     padding: 5px;
     background-color: #e9ecef;
@@ -19,7 +14,6 @@ th {
 }
 
 tr:nth-child(odd) {
-    /*border-top: 1px solid #dee2e6;*/
     background-color: #dde0e3;
 }
 
@@ -31,6 +25,23 @@ tr[excess=false] {
     color: green;
 }
 
-table {
-    margin: auto;
+.pencil:before {
+    content: "\270E";
+}
+
+.delete:before {
+    content: "\2716";
+}
+
+a {
+    text-decoration: none;
+}
+
+td, a, .pencil:before, .delete {
+    color: inherit;
+}
+
+.addMeal:before {
+    content: "\271A";
+    color: blue;
 }
