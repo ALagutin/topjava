@@ -2,19 +2,19 @@ package ru.javawebinar.topjava.dao;
 
 import ru.javawebinar.topjava.model.Meal;
 
-import java.util.Map;
+import java.util.List;
 
 public interface MealsDao {
-    Map<Integer, Meal> getMap();
+    List<Meal> getList();
 
-    void create(Meal meal);
+    Meal create(Meal meal);
 
     Meal readById(int id);
 
-    void update(Meal meal);
+    Meal update(Meal meal);
 
     void delete(int id);
 
-    int getId();
+    int getCaloriesPerDay();
 
 }

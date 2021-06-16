@@ -22,7 +22,7 @@
                        value="<c:out value="${meal.dateTime}" />"/></td>
         </tr>
         <tr>
-            <td class="fieldName">Descripion :</td>
+            <td class="fieldName">Description :</td>
             <td><input class="fieldValue" type="text" name="description" value="<c:out value="${meal.description}"/>"/>
             </td>
         </tr>

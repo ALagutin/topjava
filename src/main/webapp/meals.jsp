@@ -8,7 +8,7 @@
         <%@include file="css/meals.css"%>
     </style>
 </head>
-<jsp:useBean id="mealsTo" scope="request" type="java.util.ArrayList"/>
+<jsp:useBean id="mealsTo" scope="request" type="java.util.List"/>
 <body>
 <h2>Моя еда</h2>
 <a href="?action=create">
@@ -23,6 +23,7 @@
     </tr>
     </thead>
     <tbody>
+<%--    <c:forEach var="mealTo" items="${mealsTo}">--%>
     <c:forEach var="mealTo" items="${mealsTo}">
         <tr excess= ${mealTo.excess}>
             <td>
